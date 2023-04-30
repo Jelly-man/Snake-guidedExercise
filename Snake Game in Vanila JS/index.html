@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+
+        #game-board {
+            background-color: #CCC;
+            width: 100vmin;
+            /* Vmin sets the width to fill until the height is the minimum number where the width would be 100% of height*/
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+            /* creates a 21 square grid that is set to fraction - automatically sizes to fit screen. */
+        }
+
+        .snake {
+            background-color: hsl(200,100%, 50%);
+            border: .25vmin solid black;
+            border-radius: 10px;
+        
+        }
+
+        .food {
+            background-color: hsl(50, 100%, 50%);
+            border: .25vmin solid black;
+            border-radius: 10px;
+        }
+
+    </style>
+    <script src="./game.js" defer type="module"></script>
+    <!-- defer = delays loading of the file until after the body & type="module" = lets the code know that import and export is being used with JS files calling from one another. -->
+</head>
+<body>
+    <div id="game-board"></div> 
+</body>
+</html>
